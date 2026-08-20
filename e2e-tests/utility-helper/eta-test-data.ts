@@ -18,7 +18,7 @@ export type EtaScenarioData = {
 };
 
 const DEFAULT_QUESTION = 'Automation Sample question';
-const DEFAULT_EMAIL = 'sas-hof-test@digital.homeoffice.gov.uk';
+const DEFAULT_EMAIL = process.env.SAS_HOF_EMAIL || '';
 const DEFAULT_FULL_NAME = 'Automation Test User';
 
 function baseData(scenarioId: string, description: string, applicationSubmitted: YesNo): EtaScenarioData {
