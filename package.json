@@ -6,7 +6,7 @@
   "author": "",
   "description": "",
   "engines": {
-    "node": ">=24.18.0 <25.0.0"
+    "node": ">=24.19.0 <25.0.0"
   },
   "license": "MIT",
   "scripts": {
@@ -28,28 +28,25 @@
     "postinstall": "yarn run build"
   },
   "dependencies": {
-    "hof": "~24.4.0"
+    "hof": "~24.5.0"
   },
   "devDependencies": {
-    "@cucumber/cucumber": "^13.1.0",
-    "@cucumber/pretty-formatter": "^4.0.0",
-    "@playwright/test": "1.61.1",
-    "@types/node": "^25.9.2",
+    "@cucumber/cucumber": "^13.2.1",
+    "@cucumber/pretty-formatter": "^4.0.1",
+    "@playwright/test": "1.62.1",
+    "@types/node": "^25.9.5",
     "chai": "^6.2.2",
     "chai-as-promised": "^8.0.2",
     "dotenv": "^17.4.2",
     "eslint": "^8.57.0",
     "eslint-config-hof": "^1.3.4",
     "lodash": "^4.18.1",
-    "mocha": "^11.7.6",
+    "mocha": "^11.8.0",
     "nyc": "^18.0.0",
-    "playwright": "1.61.1",
-    "playwright-bdd": "^9.0.0"
+    "playwright": "1.62.1",
+    "playwright-bdd": "^9.2.0"
   },
   "mocha": {
     "require": "test/setup.js"
-  },
-  "resolutions": {
-    "serialize-javascript": "^7.0.7"
   }
 }

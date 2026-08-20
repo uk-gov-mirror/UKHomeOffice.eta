@@ -18,8 +18,19 @@ export type EtaScenarioData = {
 };
 
 const DEFAULT_QUESTION = 'Automation Sample question';
-const DEFAULT_EMAIL = 'sas-hof-test@digital.homeoffice.gov.uk';
 const DEFAULT_FULL_NAME = 'Automation Test User';
+
+function getRequiredSasHofEmail(): string {
+  const email = process.env.SAS_HOF_EMAIL;
+
+  if (!email) {
+    throw new Error('Missing required environment variable SAS_HOF_EMAIL for ETA E2E test data.');
+  }
+
+  return email;
+}
+
+const DEFAULT_EMAIL = getRequiredSasHofEmail();
 
 function baseData(scenarioId: string, description: string, applicationSubmitted: YesNo): EtaScenarioData {
   return {
